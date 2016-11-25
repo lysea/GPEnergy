@@ -342,7 +342,7 @@ header ul li a.active{ color: #000;}
     cursor: pointer;
     color: #464646;
 }
-.question h2.open{  color: #ec6707;  }
+.question .open{  color: #ec6707;  }
 .expansion p{
     padding:10px 30px 10px 75px;
     font-size: 14px;

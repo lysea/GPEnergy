@@ -10,15 +10,31 @@ $(document).ready(function() {
     });
 });
 function hide() {
-    var up=document.getElementsByClassName("up");
-    var more=document.getElementsByClassName("expansion");
-    if(up.style.display==block){
-        more.style.display=none;
+    var traget = document.getElementsByClassName("expansion");
+    if (traget[0].style.display == "none") {
+        traget[0].style.display = "";
+    } else {
+        traget[0].style.display = "none";
     }
 }
+// window.onload=function() {
+//     var btn=document.getElementsByClassName("question");
+//     var obtn=btn.document.getElementsByTagName("h2");
+//     obtn[0].onclick=function() {
+//         display();
+//         return false;
+//     }
+// }
 $(document).ready(function() {
-    $("h2.open").click(function () {
-        $(this).children(".expansion").slideToggle("fast");
+    $(".question h2").click(function () {
+        $(".expansion")
+        $(this).siblings(".expansion").slideToggle("fast");
+        if( $(this).siblings(".expansion").is(':hidden')){
+            // $(this).removeClass("open");
+            // $(this).css("color","#464646");
+            $(this).children("button").removeClass("down");
+            $(this).children("button").addClass("fold");
+        }
     });
 });
 function openNew(){
@@ -57,8 +73,8 @@ function openNew(){
     };
 };
 window.onload=function(){
-    var oBtn=document.getElementById("pop");
-    oBtn.onclick=function(){
+    var oBtn=document.getElementsByClassName("pop");
+    oBtn[0].onclick=function(){
         openNew();
         return false;
     }
