@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Contact</title>
+    <link href="style/reset.css" type="text/css" rel="stylesheet" media="all">
+    <link href="style/base.css" type="text/css" rel="stylesheet" media="all">
+    <link href="style/common.css" type="text/css" rel="stylesheet" media="screen">
+    <!--[if lte IE 7]><link href="style/ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="global-width clearfix">
+        <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+        <div class="top-menu">
+            <ul >
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Actueel.html"> Actueel</a></li>
+                <li><a>Voorwaarden</a></li>
+                <li><a href="faq.html"> Veel gestelde vragen </a></li>
+            </ul>
+        </div>
+        <div class="main-menu">
+            <ul >
+                <li><a href="OverGP.html">over ons</a></li>
+                <li><a> klant worden</a></li>
+                <li><a>tarieven</a></li>
+                <li><a>MVO scan</a></li>
+                <li><a class="active">contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="logo-bg"></div>
+</header>
+<div class="main-container global-width clearfix">
+    <div class="main-content">
+        <div class="sidebar">
+            <div class="login">
+                <span class="title">Inloggen</span>
+                <form id="form-login"name="form-login" method="post" action="#">
+                    <input type="text" name="username" class="username" value="Gebruikersnaam"
+                           onfocus="if(value=='Gebruikersnaam') {value=''}"  onblur="if (value=='') {value='Gebruikersnaam'}"/>
+                    <input type="text" name="password" class="password" value="Wachtwoord"
+                           onfocus="if(value=='Wachtwoord') {value=''}"  onblur="if (value=='') {value='Wachtwoord'}"     />
+                    <button type="submit" class="login-in"></button>
+                </form>
+                <a href="#">Klant worden</a>
+                <a href="#">Wachtwoord vergeten</a>
+            </div>
+            <div class="submenu">
+                <span class="title">zelf regelen</span>
+                <ul>
+                    <li><a>Uitleg jaarafrekening <span>  </span></a></li>
+                    <li><a>Meterstanden doorgeven<span></span></a></li>
+                    <li><a>Verhuizing doorgeven<span> </span></a></li>
+                    <li><a>Termijnbedrag wijzigen<span> </span></a></li>
+                    <li><a>Profiel wijzigen<span> </span></a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <span class="title">contactgegevens</span>
+                <dl>
+                    <dd>GP Groot Energie</dd>
+                    <dt>Straatnaam 123</dt>
+                    <dt>1234 AB  Plaatsnaam</dt>
+                    <dt>T. 0123 - 78 94 56 (algemeen)</dt>
+                </dl>
+                <dl>
+                    <dd>Sales</dd>
+                    <dt>T. 0123 - 45 67 89</dt>
+                </dl>
+                <dl>
+                    <dd>Klantenservice</dd>
+                    <dt>T. 0123 - 65 49 87</dt>
+                </dl>
+
+            </div>
+            <a href="register.html" class="regist-link"><button  name="button-index" class="button-index" type="button" />klant worden</button></a>
+            <div class="call">
+                <span class="title">teruggebeld worden</span>
+                <form id="form-call"name="form-call" method="post" action="#" >
+                    <input type="text" name="name" class="name" value="Uw naam"
+                           onfocus="if(value=='Uw naam') {value=''}"  onblur="if (value=='') {value='Uw naam'}"/>
+                    <input type="text" name="number" class="number" value="Uw telefoonnummer"
+                           onfocus="if(value=='Uw telefoonnummer') {value=''}"  onblur="if (value=='') {value='Uw telefoonnummer'}"     />
+                    <button type="submit" class="login-in"></button>
+                </form>
+            </div>
+            <div class="social-link">
+                <span class="title">volg ons</span>
+                <a href="#"><button type="button"class="btn-in btn"></button></a>
+                <a href="#"><button type="button"class="btn-t btn"></button></a>
+                <a href="#"><button type="button"class="btn-f btn"></button></a>
+            </div>
+
+        </div>
+        <div class="header-image"><img src="images/pgheader.jpg"></div>
+        <ul class="breadcrumb">
+            <span>U BEVINDT ZICH HIER: </span>
+            <li><a href="index.html">Home </a><span></span></li>
+            <li>Contact </li>
+        </ul>
+        <div class="page-content" id="page-content">
+            <span class="round-arrow"></span>
+            <h1 class="title">Contact  <br/>en route</h1>
+            <p id="contact-intro">Ratquiae venis magnatur antus, consequibus, tecae reprorios apid modia quod es solectaepe veles dolorep
+                udaest imagnihit od quiam quam re recest aliqui que doluptiae pa volenda ero
+                vid unt volo torernatiam id minimaxim voluptatem et earum.</p>
+            <form method="post"action="" id="form-contact"class="form-contact">
+                <p><label for="bname">Bedrijfsnaam</label><input type="text"name="bname"class=""id="bname"></p>
+                <p><label class="choose">Aanhef</label>
+                    <input type="radio" name="nhef" >Dhr.
+                    <input type="radio" name="nhef" checked="checked">Mevr.
+                </p>
+                <p><label for="Vname">Voornaam</label><input type="text"name=""class=""id="Vname"></p>
+                <p><label for="Aname">Achternaam</label><input type="text"name=""class=""id="Aname"></p>
+                <p><label for="tel">Telefoon</label><input type="text"name=""class=""id="tel"></p>
+                <p><label for="email">Email</label><input type="text"name=""class=""id="email"></p>
+                <span>verzenden<input type="submit" value="" id="contact-btn"></span>
+            </form>
+            <div class="map"><img src="images/map_03.jpg"></div>
+            <form method="post"action=""id="form-route"class="form-route">
+                <label for="code-one">Uw postcode</label>
+                <input type="text" class="code-one" name="" id="code-one"/>
+                <input type="text" class="code-two" name=""/>
+                <span>route<input type="submit" name="" value="" id="route-btn"></span>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+</div>
+<footer>
+    <div class="global-width">
+        <a href="#"><img src="images/logo_ft.png"></a>
+        <ul>
+            <li>GP Groot Energie <span>|</span></li>
+            <li> Boekelerdijk 13a<span>|</span></li>
+            <li> 1812 LV Alkmaar<span>|</span></li>
+            <li>Tel. algemeen 072 - 541 35 00<span>|</span></li>
+            <li>fax 072 - 540 60 52<span>|</span></li>
+            <li><a href="mailto:info@gpgrootenergie.nl">info@gpgrootenergie.nl</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+
+</html>
