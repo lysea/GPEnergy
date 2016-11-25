@@ -29,11 +29,18 @@ $(document).ready(function() {
     $(".question h2").click(function () {
         $(".expansion")
         $(this).siblings(".expansion").slideToggle("fast");
-        if( $(this).siblings(".expansion").is(':hidden')){
-            // $(this).removeClass("open");
+        if( $(this).siblings(".expansion").is(':visible')){
+            // $(this).siblings(".expansion").slideup("fast");
+            $(this).removeClass("open");
             // $(this).css("color","#464646");
             $(this).children("button").removeClass("down");
             $(this).children("button").addClass("fold");
+        }
+        else{
+            $(this).siblings(".expansion").slidedown("fast");
+            $(this).addClass("open");
+            $(this).children("button").removeClass("fold");
+            $(this).children("button").addClass("open");
         }
     });
 });
