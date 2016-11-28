@@ -27,22 +27,26 @@ function hide() {
 // }
 $(document).ready(function() {
     $(".question h2").click(function () {
-        $(".expansion")
-        $(this).siblings(".expansion").slideToggle("fast");
-        if( $(this).siblings(".expansion").is(':visible')){
-            // $(this).siblings(".expansion").slideup("fast");
-            $(this).removeClass("open");
-            // $(this).css("color","#464646");
-            $(this).children("button").removeClass("down");
-            $(this).children("button").addClass("fold");
+        $(".expansion").slideUp("fast");
+        if ($(this).siblings(".expansion").is(':hidden')){
+            $(".expansion").slideDown("fast");
         }
-        else{
-            $(this).siblings(".expansion").slidedown("fast");
-            $(this).addClass("open");
-            $(this).children("button").removeClass("fold");
-            $(this).children("button").addClass("open");
-        }
+        else
+        $(this).siblings(".expansion").slideUp("fast");
+
     });
+});
+$(document).ready(function() {
+    // var $tag=document.getElementsByClassName("question");
+    if ($(".expansion").is(':hidden')) {
+        $(this).siblings("h2").css("color","#464646")
+        // $(this).siblings("h2").children("button").addClass("fold");
+        $(this).siblings("h2").children("button").css("background","url(style/images/btn.png) no-repeat");
+    }
+    else {
+        $(this).siblings("h2").css("color","#ec6707");
+        $(this).siblings("h2").children("button").css("background","url(style/images/btn_down.png) no-repeat");
+    }
 });
 function openNew(){
     var sHeight= document.documentElement.scrollHeight;
