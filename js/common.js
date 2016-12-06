@@ -9,45 +9,32 @@ $(document).ready(function() {
         $(this).children(".icon").css("background","url(style/images/circle_01.png) no-repeat ");
     });
 });
-function hide() {
-    var traget = document.getElementsByClassName("expansion");
-    if (traget[0].style.display == "none") {
-        traget[0].style.display = "";
-    } else {
-        traget[0].style.display = "none";
-    }
-}
-// window.onload=function() {
-//     var btn=document.getElementsByClassName("question");
-//     var obtn=btn.document.getElementsByTagName("h2");
-//     obtn[0].onclick=function() {
-//         display();
-//         return false;
-//     }
-// }
 $(document).ready(function() {
     $(".question h2").click(function () {
         $(".expansion").slideUp("fast");
+        $("h2").children("button").removeClass("down");
+        $("h2").children("button").addClass("fold");
         if ($(this).siblings(".expansion").is(':hidden')){
             $(".expansion").slideDown("fast");
+            $(this).addClass("open");
+            $(this).children("button").removeClass("fold");
+            $(this).children("button").addClass("down");
         }
-        else
-        $(this).siblings(".expansion").slideUp("fast");
-
+        else{
+            $(this).siblings(".expansion").slideUp("fast");
+            $("h2").removeClass("open");
+            $(this).children("button").removeClass("down");
+            $(this).children("button").addClass("fold");
+        }
     });
+    $(".up").click(function () {
+        $(".expansion").slideUp("fast");
+        $(".question h2").removeClass("open");
+        $(".question h2").children("button").removeClass("down");
+        $(".question h2").children("button").addClass("fold");
+    })
 });
-$(document).ready(function() {
-    // var $tag=document.getElementsByClassName("question");
-    if ($(".expansion").is(':hidden')) {
-        $(this).siblings("h2").css("color","#464646")
-        // $(this).siblings("h2").children("button").addClass("fold");
-        $(this).siblings("h2").children("button").css("background","url(style/images/btn.png) no-repeat");
-    }
-    else {
-        $(this).siblings("h2").css("color","#ec6707");
-        $(this).siblings("h2").children("button").css("background","url(style/images/btn_down.png) no-repeat");
-    }
-});
+
 function openNew(){
     var sHeight= document.documentElement.scrollHeight;
     var sWidth=document.documentElement.scrollWidth;
@@ -65,13 +52,13 @@ function openNew(){
     oAsk.innerHTML="<div class='askCon'><div id='close'>sluit</div>" +
         "<h1>Helaas was dit niet het antwoord op uw vraag.</h1>" +
         "<p>Hier houdt onze service natuurlijk niet op. Uiteraard kunnen we u een passend antwoord geven. Daarvoor hoeft u alleen even uw gegevens achter te laten en we bellen u direct terug.</p>" +
-        "<form class='new-question'>" +
+        "<form class='new-question clearfix'>" +
         " <p><label for='name'>Bedrijfsnaam</label><input type='text' name='' class='name' id='name'></p>   "+
         "<p><label class='choose'>Aanhef</label><input type='radio' name='hef' class='' value='Dhr.'>Dhr."+
         "<input type='radio' name='hef' class='' value='Mevr.' checked='checked'>Mevr.</p>"+
         "<p><label for='nickname'>Naam</label><input type='text'name=''class='nickname' id='nickname'></p>"+
-        "<p><label for='tel-number'>Telefoonnummer</label><input type='text'name='' class='tel-number'id='tel-number'></p>"+
-        "<span>verzenden<input type='submit' name='send' class='send' value=''></span>"+
+        "<p><label for='phone-number'>Telefoonnummer</label><input type='text'name='' class='tel-number'id='phone-number'></p>"+
+        "  <a class='form-btn'>verzenden<span></span></a>"+
         "</form></div>";
     var dHeight=oAsk.offsetHeight;
     var dWidth= oAsk.offsetWidth;

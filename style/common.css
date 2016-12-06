@@ -28,6 +28,7 @@ header{
 .logo{  float: left;  line-height: 0px;  }
 .top-menu{  float: right;  }
 header ul li a.active{ color: #000;}
+header ul li a:hover{ color: #000;}
 .top-menu ul li{
     float: left;
     padding: 14px 0 14px 10px;
@@ -109,11 +110,17 @@ header ul li a.active{ color: #000;}
 .banner-tab p{
     float: left;
     font-weight: bold;
-    margin:0;
-    padding:18px 10px;
+    margin-left:10px;
+    padding:19px 5px 20px 0px;
     color: #1c1c1c;
 }
-.banner-tab p .title{
+.banner-tab p span{
+    display: block;
+    overflow: hidden;
+    text-overflow: clip;
+    width: 175px;
+}
+.banner-tab p span.title{
     font-family: Asap;
     text-transform: uppercase;
     color: #878787;
@@ -138,19 +145,24 @@ header ul li a.active{ color: #000;}
     background: #dbdbdc;
 }
 .news-headline h1{
-    padding: 15px 0;
+    float: left;
+    padding: 15px 5px 15px 0;
     font-family: Asap;
     font-size: 30px;
     line-height: 28px;
     color: #ec6707;
 }
 .news-headline span{
+    clear: left;
+    float: left;
+    display: block;
     font-family: Asap;
     font-size: 14px;
     line-height: 16px;
     color: #878787;
 }
 .news-headline p{
+    clear: left;
     width: 480px;
     font-size: 16px;
     line-height: 24px;
@@ -194,6 +206,7 @@ header ul li a.active{ color: #000;}
     font-weight: normal;
     color: #464646;
 }
+.news-item span{ display: block}
 .news-item p{
     float: left;
     width: 385px;
@@ -247,7 +260,8 @@ header ul li a.active{ color: #000;}
 }
 .news-top .back{
     display: inline-block;
-    margin: 12px 2px;
+    float: right;
+    margin: 12px 4px;
     padding-top: 3px;
     width: 55px;
     height: 18px;
@@ -309,18 +323,15 @@ header ul li a.active{ color: #000;}
     background: url(images/separator.png) no-repeat;
 }
 .page-content{
-    float: left;
-    padding:30px 0px ;
-    width: 720px;
+    position: relative;
+    padding:30px 30px 30px 70px ;
+    width: 620px;
     min-height: 700px;
     background: #fff;
 }
-#page-content h1{
-    float: left;
-    padding: 5px 5px 5px 20px;
-    font-size: 20px;
-    line-height: 24px;
-    color: #ec6707;
+#page-content{
+    padding: 30px 0;
+    width: 720px
 }
 #page-content #intro-text{
     clear: left;
@@ -342,6 +353,8 @@ header ul li a.active{ color: #000;}
     cursor: pointer;
     color: #464646;
 }
+.question h2:hover{ color: #000;}
+.question h2:hover button{ background: url(images/btn_black.png) no-repeat;}
 .question .open{  color: #ec6707;  }
 .expansion p{
     padding:10px 30px 10px 75px;
@@ -349,8 +362,9 @@ header ul li a.active{ color: #000;}
     line-height: 21px;
     color: #464646;
 }
-.choice{
+p.choice{
     margin-top: 20px;
+    padding: 5px 30px 5px 75px;
     background: #ecedee;
 }
 .choice span{
@@ -381,8 +395,8 @@ header ul li a.active{ color: #000;}
 .askCon{
     position: relative;
     padding-left: 20px;
-    width: 455px;
-    height: 380px;
+    width: 447px;
+    height: 372px;
     border-radius: 5px;
     border: 4px solid #ebecec;
     background: #fff;
@@ -420,43 +434,19 @@ header ul li a.active{ color: #000;}
     line-height: 18px;
     color: #464646;
 }
-.new-question{
-    width:424px;
-    height: 235px;
-    padding:20px 23px 0 0;
-}
+.new-question{  padding:20px 23px 0 0;  }
 .new-question p label{  line-height: 40px;  }
 .new-question  p input[type=text]{
     float: right;
     border: 0;
     outline: none;
     padding-left: 5px;
-    width: 288px;
+    margin:0 0 0 8px;
+    width: 290px;
     height: 33px;
     background:url(images/common_input.jpg) no-repeat left top;
 }
-.new-question  p .choose{  margin-right: 71px;  }
-.new-question  p input[type=radio]{  margin-left: 15px;  }
-.new-question span{
-    display: block;
-    float: right;
-    margin-top: 15px;
-    font-size: 20px;
-    line-height: 28px;
-    font-family: Asap;
-    cursor: pointer;
-    color: #ec6707;
-}
-.new-question span:hover{ opacity: 0.15}
-.new-question span .send,#contact-btn,#route-btn,.regist-btn input[type=submit]{
-    vertical-align: bottom;
-    outline: none;
-    margin-left: 10px;
-    border: 0;
-    width: 16px;
-    height: 22px;
-    background: url(images/btn_red.png) no-repeat;
-}
+.new-question  p input[type=radio]{  margin-left: 28px;  }
 #mask{
     position: absolute;
     left: 0;
@@ -467,41 +457,35 @@ header ul li a.active{ color: #000;}
 }
 /*------------------------------popover  end-------------------------*/
 #contact-intro{
-    clear: left;
-    padding: 15px 30px 40px 75px;
+    /*clear: left;*/
+    padding: 15px 15px 40px 0px;
     font-size: 16px;
     line-height: 24px;
 }
-#form-contact{
-    padding-left:75px ;
-    width: 630px;
-    height: 350px;
+.form-contact{
+    margin-bottom: 10px;
     font-size: 13px;
     color: #464646;
 }
-#form-register{
-    padding-left: 75px;
-    width: 630px;
+.form-register{
     font-size: 13px;
     line-height: 45px;
     color: #464646;
 }
-#form-register .form-group{  padding-bottom: 40px;  }
-#form-register h2{
+.form-register .form-group{  padding-bottom: 40px;  }
+.form-register .related-info{padding-bottom:60px; }
+.link-other{ padding-bottom: 20px;}
+.form-register h2{
     font-size: 16px;
     color: #ec6707;
 }
-.link-other p a,#form-protocol label a{
+.link-other a,.protocol label a{
     text-decoration: underline;
     color: #ec6707;
 }
-.link-other{ padding: 20px 0}
-.link-other p a:hover{  text-decoration: none}
-#form-protocol label a:hover{  text-decoration: none}
-#form-register p label{
-    display: inline-block;
-    width: 130px
-}
+.link-other  a:hover{  text-decoration: none}
+.protocol label a:hover{  text-decoration: none}
+.form-register p label{  width: 200px  }
 .protocol label input[type=checkbox]{
     display: inline-block;
     vertical-align: middle;
@@ -509,50 +493,44 @@ header ul li a.active{ color: #000;}
 }
 .protocol label{
     display: block;
+    width: 580px;
     padding:15px 40px 15px 0;
     line-height: 18px;
 }
-#form-contact p label,#form-route label,.protocol p .last{ line-height: 45px}
-#form-contact p .choose{margin-right: 45px}
-#form-register .form-group  p .choose{margin-right: 70px}
-input[type=radio]{ vertical-align:middle; margin-left: 5px;}
-#form-contact p input[type=text]{
-    float: right;
-    margin: 5px 160px 0 0;
+label{
+    display: inline-block;
+    width: 100px;
+    line-height: 45px;
+}
+
+input[type=radio]{ vertical-align:middle;}
+.form-contact p input[type=text]{
+    margin: 0 0 0 5px ;
     border: 0;
     width: 364px;
     height: 33px;
     background:url(images/common_input.jpg) no-repeat left top;
 }
-#form-user .Vname, #form-user .arecode,#form-user .tel-number,#form-infomore p #code-major{
+#Vname, #arecode,#number-add,#tel-number,#code-major{
     width: 68px;
     background:url(images/common_input.jpg) no-repeat left top;
 }
 .form-register .form-group  p input[type=text]{
-    border: 0;
-    margin-left: 80px;
+    margin:0 0 0 5px;
     width: 390px;
     height: 33px;
     background:url(images/common_input.jpg) no-repeat;
 }
-#form-infomore p #code-add{
-    margin-left: 5px;
+ #code-add{
     width: 34px;
     background:url(images/common_input.jpg) no-repeat left top;
 }
-#form-user .arecode,#form-infomore p #code-major{  margin-left:  77px;  }
-#form-user .tel-number,#form-infomore p #number-major {
-    margin-left: 5px;
+#arecode, #number-major, #code-major{  margin-left:  0px;  }
+#tel-number,#number-major{
     width: 305px;
     background: url(images/common_input.jpg) no-repeat left top;
 }
-#form-infomore p #number-add{
-    margin:0px;
-    width: 70px;
-    background: url(images/common_input.jpg) no-repeat left top;
-}
-#form-infomore p #number-major{ margin-left:  77px;}
-#form-infomore p span{
+.related-info p span{
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
@@ -561,59 +539,63 @@ input[type=radio]{ vertical-align:middle; margin-left: 5px;}
     height: 15px;
     background: url(images/indicator.png) no-repeat;
 }
-#form-contact span,#form-route span,#form-register .regist-btn{
+.new-question .form-btn{ padding: 10px 0;}
+.form-btn{
     display: block;
     float: right;
-    margin: 15px 5px 0 0;
+    padding: 25px 0;
     font-size: 24px;
     line-height: 28px;
     font-family: Asap;
-    cursor: pointer;
     color: #ec6707;
 }
-#form-register span:hover{ opacity: 0.15}
-#form-route span:hover{ opacity: 0.15}
-#form-contact span:hover{ opacity: 0.15}
-.map{  margin-left: 75px}
-#form-route{
-    font-size: 13px;
-    padding: 15px 10px 15px 75px;
+.form-btn span{
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 10px;
+    width: 16px;
+    height: 22px;
+    background: url(images/btn_red.png) no-repeat;
 }
-#form-route .code-one{
-    border:0;
+.form-route .form-btn{  padding :8px 0 ;  }
+.form-register .form-btn{ padding: 0}
+.form-btn:hover{ opacity: 0.15}
+
+.form-route{
+    font-size: 13px;
+    padding: 15px 0px 15px 0px;
+    color: #464646;
+}
+.form-route .code-one{
+    margin: 0 0 0 5px ;
     width: 107px;
     height: 33px;
     background:url(images/common_input.jpg) no-repeat left top;
 }
-#form-route .code-two{
+.form-route .code-two{
     border:0;
-    margin-left: 5px;
+    margin: 0 0 0 5px ;
     width: 44px;
     height: 33px;
     background:url(images/common_input.jpg) no-repeat left top;
 }
-#form-route span{  margin: 5px 15px 0 0;}
 .page-content  .round-arrow{
+    position: absolute;
     display: inline-block;
-    float: left;
-    margin-left: 10px;
+    left: 10px;
     width: 44px;
     height: 43px;
     background: url(images/icon.jpg) no-repeat;
 }
-.page-content .article{
-    float: left;
-    margin-left: 15px;
-}
-.article h1{
-    width: 200px;
-    padding: 5px;
+.page-content .article{  float: left;  }
+.page-content h1{
+    padding: 5px 5px 5px 0;
     font-size: 20px;
     line-height: 24px;
     color: #ec6707;
 }
+#page-content h1{ padding-left: 70px;}
 .article h2{
-    width: 170px;
     padding: 5px;
     font-size: 14px;
     line-height: 18px;
@@ -621,7 +603,7 @@ input[type=radio]{ vertical-align:middle; margin-left: 5px;}
 }
 .article p{
     width: 610px;
-    padding: 10px 0;
+    padding: 10px 5px 10px 0;
     font-size: 13px;
     line-height: 18px;
     color: #464646;
@@ -636,7 +618,7 @@ input[type=radio]{ vertical-align:middle; margin-left: 5px;}
 }
 #p-first{
     width: 355px;
-    padding: 15px 0 30px 0;
+    padding: 15px 5px 30px 0;
     font-family: Asap;
     font-size: 16px;
     line-height: 24px;
@@ -652,14 +634,16 @@ input[type=radio]{ vertical-align:middle; margin-left: 5px;}
 }
 
 /*.icon-hover{  background: url(images/circle_01.png) no-repeat;  }*/
-
 .teaser-block{
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
     display: block;
     float: left;
     margin-top: 20px;
     margin-right: 10px;
-    width: 232px;
+    width: 233px;
     height: 212px;
+    cursor: pointer;
     background: #FFFFFF;
 }
 .teaser-block h2{
@@ -668,7 +652,6 @@ input[type=radio]{ vertical-align:middle; margin-left: 5px;}
     font-family: Asap;
     font-size: 21px;
     line-height: 26px;
-    /*color:#96c11f;*/
 }
 .green{ color:#96c11f;}
 .orange{ color:#ec6707 ;}
@@ -747,31 +730,19 @@ input[type=radio]{ vertical-align:middle; margin-left: 5px;}
     height: 14px;
     background: url(images/arrow.png) no-repeat;
 }
-.FAQ p{
+.FAQ ul{
     clear: both;
     margin: 0;
     border-bottom: 1px solid #e9e7e7;
-    padding-left: 15px;
-    font-size: 14px;
-    line-height: 35px;
-    color: #464646;
 }
-.FAQ p a{
-    display: inline-block;
-    float: right;
-    margin: 13px;
-    width: 10px;
-    height: 10px;
-    background: url(images/btn.png) no-repeat;
-}
-.FAQ p:hover{ color: #000}
-.FAQ p:hover a{  background: url(images/btn_black.png) no-repeat;  }
-.FAQ .qustion-first{ border-top:1px solid #e9e7e7 ;}
+.FAQ ul li a:hover{ color: #000}
+.FAQ ul li a:hover span{  background: url(images/btn_black.png) no-repeat;  }
 .news-slider{
     float: left;
     margin: 20px 10px 0 10px;
     width: 230px;
     height: 280px;
+    cursor: pointer;
     background: #FFFFFF;
 }
 .news-slider h2{
@@ -798,37 +769,38 @@ input[type=radio]{ vertical-align:middle; margin-left: 5px;}
 .news-slider p{
     clear: both;
     margin: 0;
+    width: 170px;
+    height: 140px;
     padding:10px 40px 10px 20px;
     font-family: Asap;
     font-size: 21px;
     line-height: 28px;
     color: #1c1c1c;
 }
-.news-slider a .news-arrow{
+.news-slider a.news-arrow{
     display: block;
     margin:20px 25px 25px 180px ;
     width: 20px;
     height: 22px;
     background: url(images/news_arrow.png) no-repeat;
 }
-.news-slider a .news-arrow:hover{
+.news-slider a.news-arrow:hover{
     background: url(images/news_arrow_black.png) no-repeat;
 }
 /* =4 Sidebar
 ---------------------------------------------------------------------------------------------------------------------*/
 .sidebar{  float: right;  }
 .login{
+    position: relative;
     width: 230px;
     height: 146px;
     background: #FFFFFF;
 }
-.sidebar .title{
-    display: block;
+.sidebar h2{
     float: left;
     padding:15px 20px;
     line-height: 18px;
     font-family: Asap;
-    font-weight: bold;
     font-size: 14px;
     text-transform: uppercase;
     color: #b91e20;
@@ -844,9 +816,9 @@ input[type=radio]{ vertical-align:middle; margin-left: 5px;}
     background: url(images/input.jpg) no-repeat;
 }
 .login-in{
-    float: right;
-    margin-right: 4px;
-    margin-top: -5px;
+    position: absolute;
+    right: 5px;
+    top: 73px;
     border: 0;
     width: 34px;
     height: 34px;
@@ -868,28 +840,27 @@ input[type=radio]{ vertical-align:middle; margin-left: 5px;}
     height: 226px;
     background: #FFFFFF;
 }
-.submenu ul li{
+.submenu ul li,.FAQ ul li{
     clear: left;
     line-height: 34px;
     padding: 0 0 0 20px;
     border-top:1px solid #e6e4e4;
 }
-.submenu ul li a{
+.FAQ ul li{  line-height: 35px;}
+.submenu ul li a,.FAQ ul li a{
     display: block;
     font-size: 13px;
     color:#464646;
 }
-.submenu ul li a span{
+.FAQ ul li a{  font-size: 14px;}
+.submenu ul li a span,.FAQ ul li a span{
     float: right;
     display: inline-block;
     margin: 13px 10px 12px 10px;
     width: 10px;
     height: 10px;
-    /*font-weight: bold;*/
     background: url(images/btn.png) no-repeat;
-
 }
-
 .submenu ul li a:hover span{background: url(images/btn_black.png) no-repeat;}
 .contact-info{
     margin-top:20px;
@@ -908,25 +879,23 @@ input[type=radio]{ vertical-align:middle; margin-left: 5px;}
 .regist-link{
     display: block;
     margin:20px 0;
-}
-.button-index{
-    border: 0;
-    width: 230px;
-    height: 60px;
-    padding-right: 50px;
+    padding:18px 50px 18px 0;
+    width:180px;
+    height: 24px;
     font-size: 24px;
     line-height: 20px;
+    text-align: center;
     font-family: Asap;
     color: #FFFFFF;
-    background: url(images/button.jpg);
+    background: url(images/button.jpg) no-repeat;
 }
-.button-index:hover{opacity: 0.15;}
+.regist-link:hover{opacity: 0.15;}
 .call{
+    position: relative;
     width: 230px;
     height: 131px;
     background: #FFFFFF;
 }
-#form-call .name{  margin-bottom: 10px;  }
 .social{
     clear: right;
     float: right;
@@ -935,21 +904,13 @@ input[type=radio]{ vertical-align:middle; margin-left: 5px;}
     height: 280px;
     background: #bdf0fa;
 }
-.social .header{
-    display: inline-block;
-    padding: 15px 0 15px 20px;
-    font-weight: bold;
-    font-family: Asap;
-    font-size: 14px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: #32ccfe;
-}
+.social h2.title{  color: #32ccfe;  }
 .news-post{
     border-top: 2px solid #FFFFFF;
     font-size: 11px;
 }
  .news-post .person{
+     clear: left;
     display: block;
      padding: 8px 0 4px 20px;
     line-height: 16px;
@@ -988,9 +949,8 @@ input[type=radio]{ vertical-align:middle; margin-left: 5px;}
     background: #fff;
 }
 .btn{
-    float: left;
-    border:0;
-    margin: 12px 2px;
+    display: inline-block;
+    margin: 12px 0px;
     width: 21px;
     height: 21px;
 }

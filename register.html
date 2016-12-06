@@ -28,7 +28,7 @@
         <div class="main-menu">
             <ul >
                 <li><a href="OverGP.html">over ons</a></li>
-                <li><a> klant worden</a></li>
+                <li><a href="register.html" > klant worden</a></li>
                 <li><a>tarieven</a></li>
                 <li><a>MVO scan</a></li>
                 <li><a class="active">contact</a></li>
@@ -37,11 +37,10 @@
     </div>
     <div class="logo-bg"></div>
 </header>
-<div class="main-container global-width clearfix">
-    <div class="main-content">
+<div class="main-content global-width clearfix">
         <div class="sidebar">
             <div class="call">
-                <span class="title">teruggebeld worden</span>
+                <h2>teruggebeld worden</h2>
                 <form id="form-call"name="form-call" method="post" action="#" >
                     <input type="text" name="name" class="name" value="Uw naam"
                            onfocus="if(value=='Uw naam') {value=''}"  onblur="if (value=='') {value='Uw naam'}"/>
@@ -51,7 +50,7 @@
                 </form>
             </div>
             <div class="contact-info">
-                <span class="title">contactgegevens</span>
+                <h2>contactgegevens</h2>
                 <dl>
                     <dd>GP Groot Energie</dd>
                     <dt>Straatnaam 123</dt>
@@ -69,22 +68,22 @@
 
             </div>
         </div>
+    <div class="left">
         <div class="header-image"><img src="images/pgheader.jpg"></div>
         <ul class="breadcrumb">
             <span>U BEVINDT ZICH HIER: </span>
             <li><a href="index.html">Home </a><span></span></li>
             <li>Contact </li>
         </ul>
-        <div class="page-content" id="page-content">
+        <div class="page-content" >
             <span class="round-arrow"></span>
             <h1 class="title">Ik wil <br/>klant worden</h1>
             <p id="contact-intro">Ratquiae venis magnatur antus, consequibus, tecae reprorios apid modia quod es solectaepe veles dolorep
                 udaest imagnihit od quiam quam re recest aliqui que doluptiae pa volenda ero
                 vid unt volo torernatiam id minimaxim voluptatem et earum.</p>
-            <form method="post" class="form-register"id="form-register">
-            <div class="personal-info">
+            <form method="post" class="clearfix form-register"id="">
                 <h2>Gegevens aanvrager</h2>
-                <div id="form-user"class="form-group">
+                <div class="form-group">
                     <p><label class="choose">Aanhef</label>
                         <input type="radio" name="nhef" >Dhr.
                         <input type="radio" name="nhef" checked="checked">Mevr.
@@ -97,10 +96,9 @@
                         <input type="text"name=""class="tel-number"id="tel-number">
                     </p>
                 </div>
-            </div>
-            <div class="related-info">
+
                 <h2>Bedrijfsgegevens</h2>
-                <div id="form-infomore"class="form-group">
+                <div class="related-info form-group">
                     <p><label for="naam">Bedrijfsnaam</label><input type="text"name="naam"class="naam"id="naam"></p>
                     <p><label for="number-major">Straat / huisnummer</label>
                         <input type="text"name=""class="number-major"id="number-major">
@@ -115,27 +113,27 @@
                     <p><label for="knumber">KvK nummer</label><input type="text"name="knumber"class="knumber"id="knumber"></p>
                     <p><label for="gnummer">Bankrekeningnummer</label><input type="text"name="gnummer"class="gnummer"id="gnummer"></p>
                     <p><label class="choose">Betalingswijze</label>
-                        <input type="radio" name="nhef" >Machting
-                        <input type="radio" name="nhef" checked="checked">Factuur
+                        <input type="radio" name="hef" >Machting
+                        <input type="radio" name="hef" checked="checked">Factuur
                     </p>
                     <p><label for="ncode">EAN code<span></span></label><input type="text"name="ncode"class="ncode" id="ncode"></p>
                 </div>
-            </div>
-            <div class="link-other">
+
+
                 <h2>Leveradres</h2>
-                <p>Leveradres wijkt af van factuuradres.<a href="">Ik wil een ander leveradres invoeren</a></p>
-            </div>
-                <div class="tag-info">
+                <p class="link-other">Leveradres wijkt af van factuuradres.<a href="">Ik wil een ander leveradres invoeren</a></p>
+
+
                     <h2>Meterstanden</h2>
-                    <div id="form-tag" class="form-group">
+                    <div  class="form-group">
                         <p><label for="tel-werk1">Telwerk 1</label><input type="text"name="tel-werk1" id="tel-werk1"></p>
                         <p><label for="tel-werk2">Telwerk 2</label><input type="text"name="tel-werk2"  id="tel-werk2"></p>
                         <p><label for="datum">Opnamedatum</label><input type="text"name="datum" id="datum"></p>
                     </div>
-                </div>
-                <div class="protocol">
+
+
                     <h2>Akkoord</h2>
-                    <div class="form-group" id="form-protocol">
+                    <div class=" protocol form-group">
                         <label><span><input type="checkbox" name="" ></span>Ik verzoek GP Groot Energie het contract met mijn oude
                             leverancier op te zeggen en machtig GP Groot Energie hiervoor om dit namens mij te mogen doen.</label>
                         <label><span><input type="checkbox" name="" ></span>Ja, ik stel het gebruik van mijn gegevens voor het
@@ -143,14 +141,14 @@
                         <label><input type="checkbox" name="" >Ja, ik ga akkoord met de &nbsp;
                             <a href="">algemene leveringsvoorwaarden.</a></label>
                     </div>
-                </div>
-                <span class="regist-btn">verzenden<input type="submit"name="" value=""></span>
+
+                <a class="form-btn">verzenden<span></span></a>
         </form>
     </div>
-
+</div>
 
 </div>
-</div>
+
 <footer>
     <div class="global-width">
         <a href="#"><img src="images/logo_ft.png"></a>
