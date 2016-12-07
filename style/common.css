@@ -681,13 +681,15 @@ input[type=radio]{ vertical-align:middle;}
     line-height: 26px;
 }
 .teaser-block .view{
-    border: 0;
+    display: block;
     margin: 15px 2px 15px 120px;
+    padding: 3px 0;
     width: 101px;
-    height: 21px;
+    height: 15px;
     font-family: Asap;
     font-size: 14px;
     line-height: 14px;
+    text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
 }
