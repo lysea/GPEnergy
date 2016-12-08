@@ -927,23 +927,30 @@ input[type=radio]{ vertical-align:middle;}
     color: #1c1c1c;
 }
 .news-post p span{  text-decoration: underline;  }
-/*#search-form{  border-top: 2px solid #FFFFFF;  }*/
-#search-form input[type=text]{
-    margin:5px 0 5px 115px ;
-    padding-left: 8px;
+.search-form{
+    float: right;
+    margin: 7px 15px 7px 0;
+    width: 100px;
+    height: 21px;
+    font-size: 0;
+}
+.search-form input[type=text]{
+    margin: 0;
     border: 0;
-    width: 68px;
+    padding-left: 5px;
+    width: 71px;
     height: 21px;
     font-family: Asap;
     color: #FFFFFF;
     text-transform: uppercase;
     background: url(images/search.jpg)no-repeat;
 }
-#search-form button[type=submit]{
-    padding:5px 0 ;
+.search-form button[type=submit]{
+    margin-left: 3px;
     border: 0;
     width: 21px;
     height: 21px;
+    vertical-align: bottom;
     background: url(images/btn.jpg) no-repeat;
 }
 .social-link{
