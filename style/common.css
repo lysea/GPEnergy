@@ -912,7 +912,7 @@ input[type=radio]{ vertical-align:middle;}
 }
 .social h2.title{  color: #32ccfe;  }
 .news-post{
-    border-top: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
     font-size: 11px;
 }
  .news-post .person{
@@ -927,7 +927,7 @@ input[type=radio]{ vertical-align:middle;}
     color: #1c1c1c;
 }
 .news-post p span{  text-decoration: underline;  }
-#search-form{  border-top: 2px solid #FFFFFF;  }
+/*#search-form{  border-top: 2px solid #FFFFFF;  }*/
 #search-form input[type=text]{
     margin:5px 0 5px 115px ;
     padding-left: 8px;
