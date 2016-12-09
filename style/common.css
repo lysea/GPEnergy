@@ -189,17 +189,17 @@ header ul li a:hover{ color: #000;}
 }
 .news,.news-wrapper{
     float: left;
-    padding: 30px 10px 20px 80px;
-    width: 630px;
+    padding: 30px 20px 20px 80px;
+    width: 620px;
     font-size: 13px;
     line-height: 18px;
     background: #fff;
 }
 .news-item{
-    /*display: block;*/
+    overflow: hidden;
     width: 618px;
-    height: 106px;
-    padding:20px 0;
+    /*height: 106px;*/
+    padding:20px 2px 20px 0;
     border-bottom: 1px solid #e9e7e7;
 }
 .news-item h2{
@@ -221,8 +221,8 @@ header ul li a:hover{ color: #000;}
     color: #878787;
 }
 .news-item .btn-link{
-    float: right;
-    margin-top: 30px;
+    float: left;
+    margin : 30px 0 0 10px;
 }
 .item-image{
     display: block;
@@ -621,6 +621,7 @@ input[type=radio]{ vertical-align:middle;}
     color: #000;
 }
 #p-first{
+    clear: left;
     width: 355px;
     padding: 15px 5px 30px 0;
     font-family: Asap;
@@ -647,12 +648,11 @@ input[type=radio]{ vertical-align:middle;}
     margin-right: 10px;
     width: 233px;
     height: 212px;
-    cursor: pointer;
+    padding: 15px;
     background: #FFFFFF;
 }
 .teaser-block h2{
     margin:0;
-    padding: 15px 0 5px 20px;
     font-family: Asap;
     font-size: 21px;
     line-height: 26px;
@@ -665,28 +665,33 @@ input[type=radio]{ vertical-align:middle;}
 .bg-red{background:#bd2c2e; }
 .teaser-block p{
     margin: 0;
-    padding: 5px 10px 5px 20px;
+    padding:10px 5px 5px 0px;
     font-size: 13px;
     line-height: 18px;
     color: #878787;
 }
 .teaser-block .product{
     display: block;
-    padding: 10px 2px 0 120px;
+    float: right;
+    padding: 10px 20px 0 0px;
     font-size: 13px;
     line-height: 18px;
     color: #878787;
 }
 .teaser-block .price{
     display: block;
+    clear: right;
+    float: right;
     font-family: Asap;
-    padding: 8px 2px 5px 120px ;
+    padding: 10px 0px 5px 0px ;
     font-size: 36px;
     line-height: 26px;
 }
 .teaser-block .view{
     display: block;
-    margin: 15px 2px 15px 120px;
+    clear: right;
+    float: right;
+    margin: 15px 0 0 0;
     padding: 3px 0;
     width: 101px;
     height: 15px;
@@ -698,7 +703,10 @@ input[type=radio]{ vertical-align:middle;}
     color: #FFFFFF;
 }
 .view:hover{ opacity: 0.15;}
-.teaser-block:hover{  border: 1px solid #000000;  }
+.teaser-block:hover{
+    padding: 14px;
+    border: 1px solid #000000;
+}
 .FAQ{
     clear: left;
     float: left;
@@ -760,32 +768,45 @@ input[type=radio]{ vertical-align:middle;}
     line-height: 18px;
     color:#b91e20 ;
 }
-.news-slider ul{
+.news-slider .news-circle{
     float: right;
     margin:18px 25px 15px 0
 }
-.news-slider ul li{
+.news-slider .news-circle a{
+    display: inline-block;
     float: left;
-    list-style: none;
+    /*list-style: none;*/
     width: 14px;
     height:14px;
     background: url(images/news_circle01.png) no-repeat;
 }
-.news-slider ul li:hover{ background: url(images/news_circle.png) no-repeat}
-.news-slider p{
+.news-slider .news-circle a:hover,
+.news-slider .news-circle a.active
+{ background: url(images/news_circle.png) no-repeat}
+.news-slider ul.news-header{
     clear: both;
     margin: 0;
-    width: 170px;
-    height: 140px;
-    padding:10px 40px 10px 20px;
+    width: 230px;
+    height: 155px;
+    overflow: hidden;
+}
+.news-slider ul.news-header li{
+    display: inline-block;
     font-family: Asap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    width: 230px;
+    height: 155px;
+    padding:10px 40px 0px 20px;
     font-size: 21px;
     line-height: 28px;
     color: #1c1c1c;
 }
 .news-slider a.news-arrow{
+    float: right;
     display: block;
-    margin:20px 25px 25px 180px ;
+    margin:25px 25px 0px 0px ;
     width: 20px;
     height: 22px;
     background: url(images/news_arrow.png) no-repeat;
@@ -803,7 +824,7 @@ input[type=radio]{ vertical-align:middle;}
     background: #FFFFFF;
 }
 .sidebar h2{
-    float: left;
+    /*float: left;*/
     padding:15px 20px;
     line-height: 18px;
     font-family: Asap;

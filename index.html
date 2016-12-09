@@ -20,6 +20,12 @@
         pause:2000,
         autoHover:true
     });
+        $('ul.news-header').bxSlider({
+            pagerCustom: ".news-circle",
+            auto: true,
+            pause:4000,
+            autoHover:true
+        });
     });
     </script>
 </head>
@@ -124,26 +130,26 @@
                     </a>
                 </div>
             </div>
-        <div class="teaser-block">
+        <a class="teaser-block">
                 <h2 class="green">GROENE ENERGIE</h2>
                 <p>Stroom van GP Groot Energie  aantrekkelijk geprijsd.</p>
                 <span class="product">Gemiddeld p/m</span>
                 <span class="price green">€ 124,-</span>
-                <a href="#" class="view bg-green">bestellen</a>
-        </div>
-        <div class="teaser-block">
+                <span class="view bg-green">bestellen</span>
+        </a>
+        <a class="teaser-block">
                 <h2 class="orange">MVO SCAN</h2>
                 <p>Ook maatschappelijk verantwoord ondernemen? Doe de MVO scan.</p>
                 <span class="product ">Nu voor</span>
                  <span class="price orange">€ 209,-</span>
-                <a href="#"  class="view bg-orange" >aanvragen</a>
-            </div>
-        <div class="teaser-block">
+                <span class="view bg-orange" >aanvragen</span>
+            </a>
+        <a class="teaser-block">
                 <h2 class="red">OVERSTAPPEN</h2>
                 <p>Overstappen naar GP Groot Energie kost u geen energie.</p>
                 <p>Het enige wat u hoeft te doen is uw gegevens achter laten en wij regelen de rest.</p>
-                <a href="#"class="view bg-red">overstappen</a>
-        </div>
+                <span class="view bg-red">overstappen</span>
+        </a>
         <div class="FAQ">
                 <h2>Veel gestelde vragen</h2>
                 <a class="index">Alle vragen <span class="arrow"></span></a>
@@ -158,13 +164,18 @@
             </div>
         <div class="news-slider">
                 <h2>Actueel</h2>
-                <ul>
-                    <li ></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <div class="news-circle">
+                    <a data-slide-index="0"></a>
+                    <a data-slide-index="1"></a>
+                    <a data-slide-index="2"></a>
+                    <a data-slide-index="3"></a>
+                </div>
+                <ul class="news-header">
+                    <li>GP Groot Energie officieel van start na ondertekening overeenkomst HVC Energie.</li>
+                    <li>GP Groot Energie officieel van start na ondertekening overeenkomst HVC Energie.</li>
+                    <li>GP Groot Energie officieel van start na ondertekening overeenkomst HVC Energie.</li>
+                    <li>GP Groot Energie officieel van start na ondertekening overeenkomst HVC Energie.</li>
                 </ul>
-                <p >GP Groot Energie officieel van start na ondertekening overeenkomst HVC Energie.</p>
                 <a href="#"class="news-arrow"></a>
         </div>
     </div>
